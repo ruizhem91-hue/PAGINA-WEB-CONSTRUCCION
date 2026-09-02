@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soluciones Integrales | Mantenimiento y Servicios</title>
+
+    <style>
+
+        /* =========================================
+           CONFIGURACIÓN GENERAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #222;
+        }
+
+
+        /* =========================================
+           MENÚ SUPERIOR
+        ========================================= */
+
+        header {
+            width: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-principal {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #1d1d1d;
+        }
+
+        .logo-principal span {
+            color: #2d7a46;
+        }
+
+        .logo-secundario {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #777;
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #2d7a46;
+        }
+
+        .boton-menu {
+            background-color: #2d7a46;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton-menu:hover {
+            background-color: #1f5c33;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           PORTADA PRINCIPAL
+        ========================================= */
+
+        .hero {
+            min-height: 760px;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.78) 0%,
+                    rgba(0, 0, 0, 0.62) 40%,
+                    rgba(0, 0, 0, 0.20) 75%,
+                    rgba(0, 0, 0, 0.25) 100%
+                ),
+                url("https://images.pexels.com/photos/30517620/pexels-photo-30517620.jpeg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+
+            padding: 130px 8% 80px;
+        }
+
+        .hero-contenido {
+            max-width: 750px;
+            color: white;
+        }
+
+        .hero-contenido .subtitulo-hero {
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #7ed39b;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: #69c589;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 620px;
+            margin-bottom: 35px;
+            color: #eeeeee;
+        }
+
+        .boton-principal {
+            display: inline-block;
+            background-color: #2d7a46;
+            color: white;
+            padding: 17px 28px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .boton-principal:hover {
+            background-color: #1f5c33;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           BARRA DE BENEFICIOS
+        ========================================= */
+
+        .beneficios {
+            background-color: #252525;
+            color: white;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            padding: 35px 8%;
+        }
+
+        .beneficio {
+            text-align: center;
+            padding: 10px 30px;
+            border-right: 1px solid #555;
+        }
+
+        .beneficio:last-child {
+            border-right: none;
+        }
+
+        .beneficio h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .beneficio p {
+            color: #bbbbbb;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           SECCIÓN SERVICIOS
+        ========================================= */
+
+        .servicios {
+            padding: 100px 8%;
+            background-color: #f5f6f5;
+        }
+
+        .encabezado-seccion {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            margin-bottom: 55px;
+        }
+
+        .etiqueta {
+            color: #2d7a46;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .encabezado-seccion h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+            color: #222;
+            text-transform: uppercase;
+        }
+
+        .encabezado-seccion p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .servicio {
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.35s;
+        }
+
+        .servicio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .servicio-imagen {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .servicio-contenido {
+            padding: 28px;
+        }
+
+        .servicio h3 {
+            font-size: 21px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .servicio p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .enlace-servicio {
+            text-decoration: none;
+            color: #2d7a46;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .enlace-servicio:hover {
+            color: #1f5c33;
+        }
+
+
+        /* =========================================
+           SERVICIO DESTACADO
+        ========================================= */
+
+        .servicio-destacado {
+            padding: 100px 8%;
+            background-color: #222;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .destacado-imagen img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .destacado-texto {
+            color: white;
+        }
+
+        .destacado-texto .etiqueta {
+            color: #7ed39b;
+        }
+
+        .destacado-texto h2 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .destacado-texto p {
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .lista-destacado {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+
+        .lista-destacado li {
+            margin-bottom: 15px;
+            color: #eeeeee;
+            font-size: 15px;
+        }
+
+        .lista-destacado li::before {
+            content: "✓";
+            color: #69c589;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+
+        /* =========================================
+           NOSOTROS
+        ========================================= */
+
+        .nosotros {
+            padding: 100px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .nosotros-texto h2 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .nosotros-texto h2 span {
+            color: #2d7a46;
+        }
+
+        .nosotros-texto p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .nosotros-imagen img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+
+        /* =========================================
+           CONTACTO Y FORMULARIO
+        ========================================= */
+
+        .contacto {
+            padding: 100px 8%;
+            background:
+                linear-gradient(
+                    rgba(25, 25, 25, 0.92),
+                    rgba(25, 25, 25, 0.92)
+                ),
+                url("https://images.pexels.com/photos/4981780/pexels-photo-4981780.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+
+        .contacto-contenido {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contacto .etiqueta {
+            color: #7ed39b;
+        }
+
+        .contacto h2 {
+            font-size: 44px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .contacto-contenido > p:not(.etiqueta) {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #dddddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+
+        /* FORMULARIO */
+
+        .formulario-contacto {
+            max-width: 900px;
+            margin: 45px auto 0;
+            text-align: left;
+        }
+
+        .fila-formulario {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .campo {
+            margin-bottom: 22px;
+        }
+
+        .campo label {
+            display: block;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .campo input,
+        .campo textarea {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.97);
+            border: none;
+            padding: 17px;
+            font-size: 14px;
+            color: #222;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        .campo input:focus,
+        .campo textarea:focus {
+            outline: 2px solid #69c589;
+        }
+
+        .campo textarea {
+            height: 170px;
+            resize: vertical;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contador-texto {
+            text-align: right;
+            color: #cccccc;
+            font-size: 11px;
+            margin-top: 7px;
+        }
+
+        .boton-formulario {
+            border: none;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* INFORMACIÓN DE CONTACTO */
+
+        .informacion-contacto {
+            max-width: 900px;
+            margin: 65px auto 0;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .informacion-contacto h3 {
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .datos-contacto {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .dato-contacto {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dato-contacto strong {
+            color: #7ed39b;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        .dato-contacto span {
+            color: #eeeeee;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background-color: #111;
+            color: #999;
+            text-align: center;
+            padding: 30px;
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .grid-servicios {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .servicio-destacado,
+            .nosotros {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================================
+           CELULAR
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 5%;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .boton-menu {
+                display: none;
+            }
+
+            .hero {
+                min-height: 700px;
+                padding: 180px 7% 70px;
+                background-position: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .beneficios {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .beneficio {
+                border-right: none;
+                border-bottom: 1px solid #555;
+            }
+
+            .beneficio:last-child {
+                border-bottom: none;
+            }
+
+            .grid-servicios {
+                grid-template-columns: 1fr;
+            }
+
+            .encabezado-seccion h2,
+            .destacado-texto h2,
+            .nosotros-texto h2,
+            .contacto h2 {
+                font-size: 32px;
+            }
+
+            .servicio-destacado,
+            .nosotros {
+                padding: 70px 7%;
+                gap: 35px;
+            }
+
+            .destacado-imagen img,
+            .nosotros-imagen img {
+                height: 350px;
+            }
+
+            .fila-formulario {
+                grid-template-columns: 1fr;
+            }
+
+            .datos-contacto {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .contacto {
+                padding: 80px 7%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MENÚ
+    ========================================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-principal">
+                SOLUCIONES <span>INTEGRALES</span>
+            </div>
+
+            <div class="logo-secundario">
+                MANTENIMIENTO Y SERVICIOS PROFESIONALES
+            </div>
+
+        </div>
+
+
+        <nav>
+            <a href="#inicio">INICIO</a>
+            <a href="#servicios">SERVICIOS</a>
+            <a href="#nosotros">NOSOTROS</a>
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+
+
+        <a href="#contacto" class="boton-menu">
+            SOLICITAR PRESUPUESTO
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================================
+         PORTADA PRINCIPAL
+    ========================================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-contenido">
+
+            <p class="subtitulo-hero">
+                Mantenimiento · Infraestructura · Servicios
+            </p>
+
+            <h1>
+                SOLUCIONES PARA
+                <span>CADA ESPACIO</span>
+            </h1>
+
+            <p>
+                Brindamos servicios integrales de mantenimiento,
+                conservación y asistencia técnica para empresas,
+                comercios, instituciones, edificios y espacios públicos.
+            </p>
+
+            <a href="#contacto" class="boton-principal">
+                SOLICITAR PRESUPUESTO →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BENEFICIOS
+    ========================================= -->
+
+    <section class="beneficios">
+
+        <div class="beneficio">
+
+            <h3>PERSONAL CALIFICADO</h3>
+
+            <p>
+                Equipo preparado para realizar trabajos
+                técnicos y de mantenimiento.
+            </p>
+
+        </div>
+
+
+        <div class="beneficio">
+
+            <h3>PROFESIONALES HABILITADOS</h3>
+
+            <p>
+                Trabajamos con profesionales matriculados
+                cuando el servicio y la normativa lo requieren.
+            </p>
+
+        </div>
+
+
+        <div class="beneficio">
+
+            <h3>SOLUCIONES INTEGRALES</h3>
+
+            <p>
+                Diferentes servicios coordinados para
+                brindar una atención completa.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SERVICIOS
+    ========================================= -->
+
+    <section class="servicios" id="servicios">
+
+        <div class="encabezado-seccion">
+
+            <p class="etiqueta">
+                NUESTROS SERVICIOS
+            </p>
+
+            <h2>
+                UNA SOLUCIÓN PARA CADA NECESIDAD
+            </h2>
+
+            <p>
+                Ofrecemos servicios especializados y mantenimiento
+                integral, adaptándonos a las necesidades de cada
+                empresa, institución o proyecto.
+            </p>
+
+        </div>
+
+
+        <div class="grid-servicios">
+
+
+            <div class="servicio">
+
+                <img
+                    src="https://images.pexels.com/photos/30517620/pexels-photo-30517620.jpeg"
+                    alt="Mantenimiento de parques y espacios verdes"
+                    class="servicio-imagen"
+                >
+
+                <div class="servicio-contenido">
+
+                    <h3>Parques y Espacios Verdes</h3>
+
+                    <p>
+                        Mantenimiento de jardines, corte de césped,
+                        limpieza, conservación y cuidado de espacios verdes.
+                    </p>
+
+                    <a href="#contacto" class="enlace-servicio">
+                        SOLICITAR SERVICIO →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <img
+                    src="https://images.pexels.com/photos/9679179/pexels-photo-9679179.jpeg"
+                    alt="Servicios eléctricos"
+                    class="servicio-imagen"
+                >
+
+                <div class="servicio-contenido">
+
+                    <h3>Electricidad</h3>
+
+                    <p>
+                        Instalaciones, mantenimiento, reparaciones,
+                        tableros y asistencia técnica realizada por
+                        personal competente.
+                    </p>
+
+                    <a href="#contacto" class="enlace-servicio">
+                        SOLICITAR SERVICIO →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <img
+                    src="https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg"
+                    alt="Refrigeración y climatización"
+                    class="servicio-imagen"
+                >
+
+                <div class="servicio-contenido">
+
+                    <h3>Refrigeración y Climatización</h3>
+
+                    <p>
+                        Instalación, mantenimiento preventivo,
+                        diagnóstico y asistencia para equipos de
+                        climatización y refrigeración.
+                    </p>
+
+                    <a href="#contacto" class="enlace-servicio">
+                        SOLICITAR SERVICIO →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <img
+                    src="https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+                    alt="Instalaciones de gas"
+                    class="servicio-imagen"
+                >
+
+                <div class="servicio-contenido">
+
+                    <h3>Instalaciones de Gas</h3>
+
+                    <p>
+                        Servicios de instalación, revisión,
+                        reparación y mantenimiento realizados
+                        por profesionales habilitados según corresponda.
+                    </p>
+
+                    <a href="#contacto" class="enlace-servicio">
+                        SOLICITAR SERVICIO →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <img
+                    src="https://media.istockphoto.com/id/1302451148/photo/my-dad-learns-me-how-to-paint-the-walls.jpg?s=612x612&w=0&k=20&c=4ZZ6A_Ye2rRJhr0J62BEYRr3at5k8ooDZaFNgwYPrz4="
+                    alt="Mantenimiento integral"
+                    class="servicio-imagen"
+                >
+
+                <div class="servicio-contenido">
+
+                    <h3>Mantenimiento Integral</h3>
+
+                    <p>
+                        Mantenimiento preventivo y correctivo,
+                        reparación, pintura y conservación para
+                        instalaciones, edificios, comercios y
+                        diferentes tipos de infraestructura.
+                    </p>
+
+                    <a href="#contacto" class="enlace-servicio">
+                        SOLICITAR SERVICIO →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <img
+                    src="https://media.istockphoto.com/id/2217254823/photo/pool-maintenance-with-scoop-net-and-automatic-robot-cleaner.jpg?s=1024x1024&w=is&k=20&c=c65oRA0vOGgMRdpfg1QPJvBs4lNcRr8Rx8zOfMjRrEU="
+                    alt="Limpieza y conservación de piscinas"
+                    class="servicio-imagen"
+                >
+
+                <div class="servicio-contenido">
+
+                    <h3>Limpieza y Conservación de Piscinas</h3>
+
+                    <p>
+                        Servicio de limpieza, mantenimiento y conservación
+                        de piscinas, incluyendo retiro de residuos, limpieza
+                        general y cuidado de las instalaciones para mantenerlas
+                        en óptimas condiciones.
+                    </p>
+
+                    <a href="#contacto" class="enlace-servicio">
+                        SOLICITAR SERVICIO →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SERVICIO DESTACADO
+    ========================================= -->
+
+    <section class="servicio-destacado">
+
+        <div class="destacado-imagen">
+
+            <img
+                src="https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+                alt="Servicios profesionales de mantenimiento"
+            >
+
+        </div>
+
+
+        <div class="destacado-texto">
+
+            <p class="etiqueta">
+                ATENCIÓN PROFESIONAL
+            </p>
+
+            <h2>
+                MANTENIMIENTO QUE GENERA CONFIANZA
+            </h2>
+
+            <p>
+                Nuestro objetivo es brindar soluciones eficientes
+                mediante una correcta coordinación de servicios y
+                personal especializado para cada tipo de trabajo.
+            </p>
+
+            <ul class="lista-destacado">
+
+                <li>
+                    Atención para empresas, comercios e instituciones.
+                </li>
+
+                <li>
+                    Mantenimiento preventivo y correctivo.
+                </li>
+
+                <li>
+                    Personal calificado según el servicio requerido.
+                </li>
+
+                <li>
+                    Profesionales matriculados cuando corresponda.
+                </li>
+
+            </ul>
+
+            <a href="#contacto" class="boton-principal">
+                CONSULTAR SERVICIO →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         NOSOTROS
+    ========================================= -->
+
+    <section class="nosotros" id="nosotros">
+
+        <div class="nosotros-texto">
+
+            <p class="etiqueta">
+                SOBRE NOSOTROS
+            </p>
+
+            <h2>
+                UNA EMPRESA DE
+                <span>SOLUCIONES INTEGRALES</span>
+            </h2>
+
+            <p>
+                Trabajamos para ofrecer diferentes soluciones
+                de mantenimiento y servicios técnicos en un
+                mismo lugar.
+            </p>
+
+            <p>
+                Buscamos simplificar la gestión de nuestros clientes,
+                coordinando profesionales y servicios para responder
+                a las necesidades de cada proyecto.
+            </p>
+
+            <a href="#contacto" class="boton-principal">
+                CONTACTARNOS →
+            </a>
+
+        </div>
+
+
+        <div class="nosotros-imagen">
+
+            <img
+                src="https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg"
+                alt="Equipo de trabajo y mantenimiento"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACTO Y PRESUPUESTO
+    ========================================= -->
+
+    <section class="contacto" id="contacto">
+
+        <div class="contacto-contenido">
+
+            <p class="etiqueta">
+                SOLICITÁ TU PRESUPUESTO
+            </p>
+
+            <h2>
+                ¿CÓMO PODEMOS AYUDARTE?
+            </h2>
+
+            <p>
+                Completá el formulario y contanos qué servicio necesitás.
+                Nos pondremos en contacto con vos para conocer mejor
+                tu necesidad y preparar una propuesta.
+            </p>
+
+
+            <!-- FORMULARIO -->
+
+            <form class="formulario-contacto">
+
+                <div class="fila-formulario">
+
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            NOMBRE Y APELLIDO
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escribí tu nombre y apellido"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            NÚMERO DE CONTACTO
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ejemplo: 351000000"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="motivo">
+                        MOTIVO DE LA CONSULTA
+                    </label>
+
+                    <textarea
+                        id="motivo"
+                        name="motivo"
+                        maxlength="500"
+                        placeholder="Contanos qué servicio necesitás. Podés escribir hasta 500 caracteres."
+                        required
+                    ></textarea>
+
+                    <p class="contador-texto">
+                        Máximo 500 caracteres.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton-principal boton-formulario"
+                >
+                    ENVIAR SOLICITUD →
+                </button>
+
+            </form>
+
+
+
+            <!-- DATOS DE CONTACTO -->
+
+            <div class="informacion-contacto">
+
+                <h3>
+                    TAMBIÉN PODÉS CONTACTARNOS
+                </h3>
+
+
+                <div class="datos-contacto">
+
+
+                    <div class="dato-contacto">
+
+                        <strong>
+                            HORARIOS DE ATENCIÓN
+                        </strong>
+
+                        <span>
+                            Lunes a lunes · 7:00 AM a 10:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <div class="dato-contacto">
+
+                        <strong>
+                            CORREO
+                        </strong>
+
+                        <span>
+                            solucionesintegrales@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <div class="dato-contacto">
+
+                        <strong>
+                            TELÉFONO
+                        </strong>
+
+                        <span>
+                            351000000
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 SOLUCIONES INTEGRALES - Todos los derechos reservados
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
